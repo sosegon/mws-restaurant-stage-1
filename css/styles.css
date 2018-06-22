@@ -60,6 +60,7 @@ nav {
 }
 nav h1 {
   margin: auto;
+  padding-top: 10px;
 }
 nav h1 a {
   color: #fff;
@@ -194,28 +195,29 @@ nav h1 a {
 /* ====================== Restaurant Details ====================== */
 .inside header {
   top: 0;
-  height: 10vh;
+  height: 50px;
   width: 100vw;
   position: fixed;
-  z-index: 800;
+  z-index: 1000;
 }
-.inside #map-container {
+.inside .top-container {
   background: #f3f3f3 none repeat scroll 0 0;
   height: 30vh;
   width: 100vw;
-  top: 10vh;
+  top: 50px;
   right: 0;
   position: fixed;
-  z-index: 900;
+  z-index: 500;
 }
-.inside #menu-container {
+.inside .bottom-container {
   background: #f3f3f3 none repeat scroll 0 0;
   height: 60vh;
   width: 100vw;
-  top: 40vh;
+  top: calc(30vh + 50px);
   right: 0;
   display: table;;
   position: relative;
+  z-index: 100;
 }
 .inside #map {
   background-color: #ccc;
@@ -226,6 +228,7 @@ nav h1 a {
   width: 100%;
   position: fixed;
   bottom: 0;
+  z-index: 1000;
 }
 #restaurant-name {
   color: #f18200;
@@ -292,4 +295,24 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+@media screen and (min-width: 550px) {
+  .inside .left-container {
+    background: #f3f3f3 none repeat scroll 0 0;
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+  }
+  .inside .right-container {
+    background: #f3f3f3 none repeat scroll 0 0;
+    height: 100vh;
+    width: 50vw;
+    top: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  nav h1 a {
+  font-size: 10pt;
+  letter-spacing: 1px;
+  }
 }
